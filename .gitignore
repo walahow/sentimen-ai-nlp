@@ -1,5 +1,5 @@
-# Output & model cache
-output/
+# Model cache
+
 __pycache__/
 *.pyc
 .cache/

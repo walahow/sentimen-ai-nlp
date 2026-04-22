@@ -1,0 +1,13 @@
+SVM Accuracy: 0.5827
+
+              precision    recall  f1-score   support
+
+     Negatif       0.57      0.63      0.60       105
+      Netral       0.59      0.65      0.62       124
+     Positif       0.58      0.31      0.40        49
+
+    accuracy                           0.58       278
+   macro avg       0.58      0.53      0.54       278
+weighted avg       0.58      0.58      0.57       278
+
+Transformer avg confidence: 0.6884
