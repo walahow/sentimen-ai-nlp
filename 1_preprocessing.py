@@ -1,5 +1,5 @@
 """
-Step 1: Merge data Neysa + Rizky, lalu preprocessing teks.
+Step 1: Merge data Neysa 1 + Neysa 2 + Rizky, lalu preprocessing teks.
 Output: output/data_preprocessed.csv
 """
 
@@ -10,10 +10,15 @@ import pandas as pd
 os.makedirs("output", exist_ok=True)
 
 # --- Load & Merge ---
-neysa = pd.read_csv("Neysa_Scrap 1_clean.csv", encoding="utf-8-sig")
-rizky = pd.read_csv("Rizky_Hasil scrap komentar.csv", encoding="utf-8-sig")
+neysa1 = pd.read_csv("Neysa_Scrap 1_clean.csv", encoding="utf-8-sig")
+neysa2 = pd.read_csv("Neysa_Scrap 2_clean.csv", encoding="utf-8-sig")
+rizky  = pd.read_csv("Rizky_Hasil scrap komentar.csv", encoding="utf-8-sig")
 
-df = pd.concat([neysa, rizky], ignore_index=True)
+print(f"Neysa 1: {len(neysa1)} baris")
+print(f"Neysa 2: {len(neysa2)} baris")
+print(f"Rizky  : {len(rizky)} baris")
+
+df = pd.concat([neysa1, neysa2, rizky], ignore_index=True)
 df.columns = ["text"]
 df.drop_duplicates(subset="text", inplace=True)
 df.dropna(subset="text", inplace=True)
