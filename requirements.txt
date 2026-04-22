@@ -1,0 +1,9 @@
+pandas
+langdetect
+lingua-language-detector
+transformers
+torch
+scikit-learn
+matplotlib
+seaborn
+wordcloud

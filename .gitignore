@@ -1,0 +1,21 @@
+# Output & model cache
+output/
+__pycache__/
+*.pyc
+.cache/
+
+# HuggingFace model cache
+~/.cache/huggingface/
+
+# Environment
+.env
+venv/
+.venv/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Raw data with full attributes (privasi)
+Rizky_Hasil scrap komentar full-attr.csv
+Rizky_Hasil Scrapper untuk 10 link.csv
