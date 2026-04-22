@@ -32,6 +32,7 @@ print("Loading model English...")
 pipe_en = pipeline(
     "sentiment-analysis",
     model="cardiffnlp/twitter-xlm-roberta-base-sentiment",
+    tokenizer=("cardiffnlp/twitter-xlm-roberta-base-sentiment", {"use_fast": False}),
     device=device,
     truncation=True,
     max_length=128,
@@ -41,6 +42,7 @@ print("Loading model Indonesian...")
 pipe_id = pipeline(
     "sentiment-analysis",
     model="mdhugol/indonesia-bert-sentiment-classification",
+    tokenizer=("mdhugol/indonesia-bert-sentiment-classification", {"use_fast": False}),
     device=device,
     truncation=True,
     max_length=128,
@@ -50,6 +52,7 @@ print("Loading model Multilingual (fallback)...")
 pipe_multi = pipeline(
     "sentiment-analysis",
     model="cardiffnlp/twitter-xlm-roberta-base-sentiment-multilingual",
+    tokenizer=("cardiffnlp/twitter-xlm-roberta-base-sentiment-multilingual", {"use_fast": False}),
     device=device,
     truncation=True,
     max_length=128,
